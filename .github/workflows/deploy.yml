@@ -46,6 +46,10 @@ jobs:
       - name: Export the app with shinylive
         run: Rscript -e 'shinylive::export("app", "_site")'
 
+      # Static files served next to the app, such as the instructor notes PDF
+      - name: Add static files
+        run: cp -R files/. _site/
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

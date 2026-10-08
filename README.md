@@ -6,6 +6,10 @@ and the game shows who gets coverage, who gets care, and who makes a profit.
 
 **Play it here: https://cellis212.github.io/three-party-game/**
 
+**Instructor notes (PDF):** https://cellis212.github.io/three-party-game/three-party-game-instructor-notes.pdf
+(also linked in the app's left sidebar). They cover setup, a round-by-round
+script, teaching notes, and debrief questions.
+
 ## How it runs
 
 The site is the R Shiny app in `app/`, built with
@@ -30,7 +34,8 @@ browser (webR), so there is no server.
 
 The app source is kept in a private repository with the instructor materials.
 A push to `main` here rebuilds the site with GitHub Actions
-(`.github/workflows/deploy.yml`).
+(`.github/workflows/deploy.yml`). Files in `files/` (the instructor notes) are
+copied next to the app.
 
 To run the app on your own computer instead:
 
