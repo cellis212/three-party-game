@@ -98,6 +98,10 @@ TEAM_COLORS <- list(
 # copy of R with its own in-memory database.
 IS_WEBR <- identical(R.version$os, "emscripten")
 
+# Instructor notes PDF (guides/instructor_guide.pdf), published with the site
+# by scripts/publish_site.sh. Linked from the sidebar in both versions.
+INSTRUCTOR_NOTES_URL <- "https://cellis212.github.io/three-party-game/three-party-game-instructor-notes.pdf"
+
 # Styles for the pop-out negotiation board (server page and browser pop-out)
 NEGOTIATION_POPUP_CSS <- "
   body {

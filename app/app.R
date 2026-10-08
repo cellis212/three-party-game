@@ -38,7 +38,13 @@ instructor_dashboard_ui <- dashboardPage(
     sidebarMenu(
       id = "tabs",
       menuItem("Public Display", tabName = "display", icon = icon("tv")),
-      menuItem("Instructor Control", tabName = "instructor", icon = icon("chalkboard-teacher"))
+      menuItem("Instructor Control", tabName = "instructor", icon = icon("chalkboard-teacher")),
+      tags$li(
+        tags$a(
+          href = INSTRUCTOR_NOTES_URL, target = "_blank", download = "",
+          icon("file-pdf"), tags$span("Instructor Notes (PDF)")
+        )
+      )
     ),
 
     # Game status in sidebar
