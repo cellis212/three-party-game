@@ -58,7 +58,30 @@ instructor_dashboard_ui <- dashboardPage(
     tags$head(
       tags$link(rel = "icon", type = "image/svg+xml", href = "favicon.svg"),
       tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
-      plotly_page_dependencies()
+      plotly_page_dependencies(),
+
+      # Browser build (webR): a download link opens a new tab, and that tab
+      # cannot reach R. Fetch the file in this tab and save it from here.
+      if (IS_WEBR) tags$script(HTML("
+        $(document).on('click', 'a.shiny-download-link', function(e) {
+          e.preventDefault();
+          fetch(this.href).then(function(response) {
+            var disposition = response.headers.get('content-disposition') || '';
+            var match = disposition.match(/filename=\"?([^\";]+)\"?/);
+            var filename = match ? match[1] : 'download.csv';
+            return response.blob().then(function(blob) {
+              var url = URL.createObjectURL(blob);
+              var link = document.createElement('a');
+              link.href = url;
+              link.download = filename;
+              document.body.appendChild(link);
+              link.click();
+              link.remove();
+              setTimeout(function() { URL.revokeObjectURL(url); }, 10000);
+            });
+          });
+        });
+      "))
     ),
 
     tabItems(
