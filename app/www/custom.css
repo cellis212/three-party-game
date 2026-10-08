@@ -1,0 +1,666 @@
+/* Custom CSS for Three-Party System Game Shiny App */
+
+/* Rate matrix table — align inputs under headers */
+.table-bordered {
+  width: auto !important;
+}
+.table-bordered th {
+  min-width: 120px;
+  text-align: center;
+}
+.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table-bordered td .form-group {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.table-bordered td .form-group input[type="number"] {
+  text-align: center;
+}
+
+/* Global font improvements for projection */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+/* Dashboard header improvements */
+.main-header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Larger fonts for value boxes */
+.small-box h3 {
+  font-size: 42px !important;
+  font-weight: bold;
+}
+
+.small-box p {
+  font-size: 18px !important;
+}
+
+.small-box .icon-large {
+  font-size: 90px !important;
+}
+
+/* Box titles */
+.box-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Make buttons more prominent */
+.btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.btn-lg {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+/* Display header styling */
+.display-header h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: fadeIn 1s;
+}
+
+.display-header h2 {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Leaderboard styling */
+.plotly {
+  border-radius: 8px;
+}
+
+/* Sidebar improvements */
+.sidebar-menu > li > a {
+  font-size: 16px;
+  padding: 15px 10px;
+}
+
+.sidebar-menu > li.active > a {
+  font-weight: bold;
+  border-left: 4px solid #3c8dbc;
+}
+
+/* Table improvements */
+.dataTables_wrapper {
+  font-size: 15px;
+}
+
+.dataTables_wrapper th {
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #3c8dbc;
+  color: white;
+}
+
+/* Form inputs - larger for better visibility */
+.form-control {
+  font-size: 16px;
+  padding: 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.help-block {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Slider inputs */
+.irs-bar {
+  background: linear-gradient(to bottom, #3c8dbc 0%, #367fa9 100%);
+}
+
+.irs-from, .irs-to, .irs-single {
+  background: #3c8dbc;
+  font-size: 14px;
+}
+
+/* Checkbox styling */
+.checkbox {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.checkbox input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-right: 10px;
+}
+
+/* Modal improvements */
+.modal-dialog {
+  margin: 100px auto;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 16px;
+}
+
+/* Notification improvements */
+.shiny-notification {
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Progress bar */
+.progress {
+  height: 30px;
+  font-size: 16px;
+}
+
+.progress-bar {
+  line-height: 30px;
+}
+
+/* Value box animations */
+.small-box {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.small-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Tabs */
+.nav-tabs > li > a {
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+.nav-tabs > li.active > a {
+  font-weight: bold;
+  background-color: #3c8dbc !important;
+  color: white !important;
+}
+
+/* Content box padding */
+.box-body {
+  padding: 20px;
+}
+
+/* Market simulation animation */
+.market-sim-root {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #0d1b2a;
+  border-radius: 12px;
+  padding: 18px;
+  color: #f1f5f9;
+  position: relative;
+  overflow: visible;
+}
+
+.market-sim-stage {
+  position: relative;
+  height: 880px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #102a43 0%, #0b132b 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: visible;
+}
+
+.market-sim-canvas-host {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.market-sim-panel-labels {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.market-sim-panel-label {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(241, 245, 249, 0.95);
+}
+
+.market-sim-panel-label--care,
+.market-sim-panel-label--claims {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.market-sim-timeline {
+  position: relative;
+  height: 20px;
+  border-radius: 20px;
+  background: rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+}
+
+.market-sim-timeline-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.45);
+}
+
+.market-sim-timeline-progress {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8 0%, #22d3ee 100%);
+  transition: width 0.3s ease-out;
+}
+
+.market-sim-timeline-marker {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 12px;
+  height: 32px;
+  border-radius: 6px;
+  background: #fbbf24;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.45);
+  transform: translateX(-50%);
+  transition: left 0.3s ease-out;
+}
+
+.market-sim-event-caption {
+  position: relative;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(226, 232, 240, 0.92);
+  background: rgba(15, 23, 42, 0.8);
+  padding: 6px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.45);
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.market-sim-annotation {
+  position: relative;
+  text-align: center;
+  margin-top: 6px;
+  min-height: 28px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(187, 247, 208, 0.95);
+  background: rgba(22, 101, 52, 0.35);
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.market-sim-annotation.visible {
+  opacity: 1;
+}
+
+.market-sim-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.market-sim-controls-left,
+.market-sim-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.market-sim-btn {
+  background: rgba(30, 64, 175, 0.35);
+  color: #f8fafc;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.market-sim-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.35);
+}
+
+.market-sim-btn:active {
+  transform: translateY(0);
+  background: rgba(37, 99, 235, 0.8);
+}
+
+.market-sim-btn .label {
+  line-height: 1;
+  white-space: nowrap; /* prevent label wrapping in controls */
+}
+
+.market-sim-btn--icon {
+  padding: 8px 10px;
+  width: 44px;
+  justify-content: center;
+}
+
+.market-sim-speed-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 999px;
+  padding: 4px 8px;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.market-sim-speed-toggle .speed-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.8);
+  letter-spacing: 0.05em;
+}
+
+.market-sim-btn--speed {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  color: rgba(226, 232, 240, 0.85);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.market-sim-btn--speed.active,
+.market-sim-btn--speed:hover {
+  background: rgba(59, 130, 246, 0.7);
+  color: #f8fafc;
+}
+
+.market-sim-clock {
+  font-family: 'Menlo', 'Courier New', monospace;
+  font-size: 18px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* Widen large modals (used by animation) on wide screens */
+@media (min-width: 1200px) {
+  .modal-lg {
+    width: 1100px;
+  }
+}
+
+/* Responsive stage height for smaller screens */
+@media (max-width: 1200px) {
+  .market-sim-stage {
+    height: 780px;
+  }
+}
+@media (max-width: 992px) {
+  .market-sim-stage {
+    height: 700px;
+  }
+}
+
+.market-sim-root button:focus {
+  outline: 2px solid rgba(96, 165, 250, 0.85);
+  outline-offset: 2px;
+}
+
+/* Dashboard body */
+.content-wrapper {
+  background-color: #ecf0f5;
+}
+
+/* Icons in sidebar */
+.sidebar-menu .fa {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Plotly hover labels */
+.plotly .hoverlayer .hovertext {
+  font-size: 14px !important;
+}
+
+/* Status indicators */
+.status-submitted {
+  color: #00a65a;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.status-pending {
+  color: #f39c12;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.status-missing {
+  color: #dd4b39;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Game status sidebar section */
+.sidebar hr {
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Custom table styling */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table > thead > tr > th {
+  background-color: #3c8dbc;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.table > tbody > tr > td {
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .small-box h3 {
+    font-size: 32px !important;
+  }
+
+  .small-box p {
+    font-size: 14px !important;
+  }
+
+  .box-title {
+    font-size: 18px;
+  }
+}
+
+/* Print styles for exporting */
+@media print {
+  .main-sidebar,
+  .main-header,
+  .btn,
+  .box-footer {
+    display: none !important;
+  }
+
+  .content-wrapper {
+    margin-left: 0 !important;
+  }
+}
+
+/* Compact inputs inside decision matrix tables */
+.table-condensed .form-group {
+  margin-bottom: 0;
+}
+.table-condensed .checkbox {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.table-condensed td .form-control {
+  padding: 4px 6px;
+  height: auto;
+}
+
+/* Loading spinner */
+.shiny-spinner-output-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Network diagram styling */
+#network_diagram {
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Negotiation Board — projected display */
+.neg-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.neg-table th,
+.neg-table td {
+  border: 2px solid #ddd;
+  padding: 12px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neg-header {
+  font-size: 20px;
+  font-weight: 700;
+  background: #f8f9fa;
+  padding: 14px 8px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.neg-row-label {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left !important;
+  padding-left: 16px !important;
+  background: #f8f9fa;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.neg-cell {
+  font-size: 48px;
+  font-weight: bold;
+  height: 70px;
+  width: 70px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.neg-done {
+  background-color: #27ae60;
+  color: white;
+}
+
+.neg-pending {
+  background-color: #ecf0f1;
+  color: #bdc3c7;
+}
+
+.neg-counter {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.negotiation-waiting {
+  font-size: 20px;
+  color: #95a5a6;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Ensure text in boxes and value boxes wraps and isn't clipped */
+.box .box-header .box-title {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.small-box {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.small-box h3 {
+  white-space: normal !important;
+  line-height: 1.1;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.small-box p {
+  white-space: normal !important;
+  margin-bottom: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
